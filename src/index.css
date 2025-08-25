@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Subtle Professional Light Mode */
+    --background: 245 246 248; /* Soft Mist Gray */
+    --foreground: 20 24 33;   /* Charcoal Text */
+    --card: 250 251 253;      /* Gentle Off-White */
+    --card-foreground: 20 24 33;
+    --popover: 250 251 253;
+    --popover-foreground: 20 24 33;
+    --primary: 99 102 241;    /* Indigo (Accent) */
+    --primary-foreground: 255 255 255;
+    --secondary: 129 140 248; /* Soft Indigo Tint */
+    --secondary-foreground: 255 255 255;
+    --accent: 139 92 246;     /* Muted Violet */
+    --accent-foreground: 255 255 255;
+    --muted: 235 237 240;     /* Subtle Neutral */
+    --muted-foreground: 100 116 139;
+    --border: 225 228 233;
+    --input: 235 237 240;
+    --ring: 99 102 241;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Modern Professional Dark Mode */
+    --background: 0 0 0;       /* True Black */
+    --foreground: 250 250 250; /* Pure White Text */
+    --card: 20 20 20;          /* Charcoal */
+    --card-foreground: 250 250 250;
+    --popover: 20 20 20;
+    --popover-foreground: 250 250 250;
+    --primary: 129 140 248;    /* Bright Indigo */
+    --primary-foreground: 0 0 0;
+    --secondary: 167 139 250;  /* Soft Violet */
+    --secondary-foreground: 0 0 0;
+    --accent: 139 92 246;      /* Rich Violet */
+    --accent-foreground: 0 0 0;
+    --muted: 39 39 42;
+    --muted-foreground: 161 161 170;
+    --border: 39 39 42;
+    --input: 39 39 42;
+    --ring: 129 140 248;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Premium scrollbar design */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/50;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, rgb(var(--primary)), rgb(var(--secondary)));
+    @apply rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, rgb(var(--secondary)), rgb(var(--accent)));
+  }
+  
+  ::-webkit-scrollbar-corner {
+    @apply bg-muted/50;
+  }
+}
+
+@layer components {
+  /* Premium gradient text effects */
+  .text-gradient { /* subtle iris sweep */
+    background: linear-gradient(135deg,
+      rgb(var(--primary)) 0%,
+      rgb(var(--secondary)) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(135deg, rgb(var(--primary)), rgb(var(--secondary)));
+    @apply bg-clip-text text-transparent;
+  }
+  
+  /* Premium gradient backgrounds */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg,
+      rgb(var(--primary)) 0%,
+      rgb(var(--secondary)) 100%);
+  }
+  
+  .bg-gradient-secondary {
+    background: linear-gradient(135deg, rgb(var(--secondary)), rgb(var(--accent)));
+  }
+  
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--primary)));
+  }
+  
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, 
+      rgb(var(--primary)) 0%, 
+      rgb(var(--secondary)) 50%, 
+      rgb(var(--accent)) 100%);
+  }
+  
+  /* Premium glass effects */
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/70 border border-white/20 shadow-xl;
+  }
+  
+  .dark .glass-morphism {
+    @apply backdrop-blur-xl bg-black/40 border border-white/10 shadow-2xl;
+  }
+  
+  /* Premium interactive effects */
+  .hover-lift {
+    @apply transition-all duration-500 ease-out hover:shadow-xl hover:-translate-y-1 hover:scale-[1.01];
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgb(var(--primary) / 0.3);
+  }
+  
+  .btn-glow:hover {
+    box-shadow: 0 0 20px rgb(var(--primary) / 0.6);
+  }
+  
+  /* Premium card styles */
+  .card-premium {
+    @apply bg-card/95 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover-lift;
+  }
+  
+  .card-hero {
+    @apply glass-morphism rounded-3xl p-8 hover-glow;
+  }
+  
+  /* Premium section layouts */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-20 lg:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Premium animation classes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
