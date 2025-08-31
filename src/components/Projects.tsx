@@ -35,56 +35,66 @@ const projects = [
     //   features: ['Design Token Extraction', 'Component Generation', 'Automated Styling', 'Reduced Manual Coding'],
     //   status: 'Beta',
     //   impact: '70% faster frontend delivery'
-    // },
-    // {
-    //   id: 4,
-    //   title: 'Senza Platform POCs',
-    //   description: 'Developed multiple proof-of-concepts on Synamedia Senza platform to showcase seamless web apps and video content delivery to any TV screen.',
-    //   image: '/api/placeholder/600/400',
-    //   category: 'POC / Innovation',
-    //   technologies: ['React', 'GraphQL', 'Senza SDK', 'Web APIs'],
-    //   features: ['Custom Widgets', 'Streaming Integrations', 'Client Demos', 'Rapid Prototyping'],
-    //   status: 'POC',
-    //   impact: 'Successfully demoed to customers for sales onboarding'
-    // },
+    // },    
     {
-        id: 4,
+        id: 1,
         title: 'Code generator using LLM',
         description: 'A code generator that uses LLM to generates server code and testcases in Node.Js. This was part of a hacakthon we participated in.',
         image: '/api/placeholder/600/400',
-        category: 'Portfolio',
+        category: 'Hackathon',
         technologies: ['Node.js', 'OpenAi (LLM)', 'JavaScript'],
         features: ['Animations', 'Responsive UI', 'Dark/Light Mode', 'Performance Optimized'],
-        github: 'https://github.com/phanishree/hackathon_repo',
+        github: 'https://github.com/greeshmarr/hackathon_repo',
         status: 'Live',
-        impact: 'Showcases innovative use of LLM in code generation'
+        impact: 'Showcases innovative use of LLM in code generation',
+        demo: null,
       },
     {
-      id: 5,
+      id: 2,
       title: 'Portfolio Website',
       description: 'Personal portfolio showcasing modern frontend practices with Framer Motion, animations, and responsive design.',
       image: '/api/placeholder/600/400',
       category: 'Portfolio',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       features: ['Animations', 'Responsive UI', 'Dark/Light Mode', 'Performance Optimized'],
-      github: 'https://github.com/greeshmarr/portfolio',
-      demo: 'https://greeshmarr.dev',
+      github: 'https://github.com/greeshmarr/my-portfolio',
+      demo: 'https://greeshmarr.github.io/my-portfolio/',
       status: 'Live',
       impact: 'Demonstrates personal brand & modern frontend skills'
     },
     {
-      id: 6,
+      id: 3,
       title: 'Network Slicing ML Research',
       description: 'Research on ML-based network slicing for 5G at IIT Patna, focused on resource allocation for EVs. Published in Springer and indexed on Google Scholar.',
       image: '/api/placeholder/600/400',
       category: 'Research',
       technologies: ['Python', 'TensorFlow', 'ML Algorithms', 'Data Visualization'],
       features: ['Resource Allocation', 'ML Models', 'Performance Analysis', 'Research Dashboard'],
-      github: 'https://github.com/greeshmarr/network-slicing-ml',
-      demo: 'https://research-demo.example.com',
+      github: null,
+      demo: null,
       status: 'Published',
       impact: 'Springer publication, Google Scholar indexed'
+    },
+    {
+      id: 4,
+      title: 'Omnifood - AI Powered Meal Subscription',
+      description: 'Built a fully responsive landing page for Omnifood, a modern AI-powered meal subscription service. Implemented mobile-first design, reusable components, and smooth animations to deliver a polished user experience.',
+      image: '/projects/omnifood/omnifood-preview.png',
+      category: 'Frontend Project',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Flexbox', 'CSS Grid', 'Netlify'],
+      features: [
+        'Responsive multi-section landing page',
+        'Reusable UI components',
+        'Sticky navigation and smooth scrolling',
+        'Mobile-first layout with CSS Grid & Flexbox',
+        'Deployed on Netlify'
+      ],
+      status: 'Live',
+      impact: 'Improved frontend skills in responsive design and modern layout techniques',
+      demo: 'https://omnifood-greeshma.netlify.app/',
+      github: 'https://github.com/greeshmarr/omnifood',
     }
+    
   ]
   
 
@@ -322,7 +332,7 @@ export function Projects() {
                     <Github size={18} className="mr-2" />
                     View Code
                   </motion.a>}
-                  {/* <motion.a
+                  {selectedProject.demo !== null && <motion.a
                     href={selectedProject.demo}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -332,7 +342,7 @@ export function Projects() {
                   >
                     <Play size={18} className="mr-2" />
                     Live Demo
-                  </motion.a> */}
+                  </motion.a>}
                 </div>
               </motion.div>
             </motion.div>
