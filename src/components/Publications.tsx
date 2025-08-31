@@ -4,62 +4,42 @@ import { BookOpen, ExternalLink, Calendar, Users, Award, Download } from 'lucide
 
 const publications = [
   {
-    id: 1,
-    title: 'ML-based Network Slicing Optimization for 5G Networks',
-    authors: ['Greeshma R R', 'Dr. Rajesh Kumar', 'Dr. Priya Sharma'],
-    journal: 'International Journal of Advanced Computer Science',
-    venue: 'IIT Patna Research Conference 2021',
-    year: 2021,
-    type: 'Conference Paper',
-    status: 'Published',
-    abstract: 'This paper presents a novel machine learning approach for optimizing network slicing in 5G networks. We propose an adaptive algorithm that dynamically allocates network resources based on real-time traffic patterns and quality of service requirements. Our experimental results demonstrate significant improvements in network efficiency and user experience.',
-    keywords: ['5G Networks', 'Machine Learning', 'Network Slicing', 'Resource Optimization', 'QoS'],
-    doi: '10.1234/ijacs.2021.12345',
-    citations: 15,
-    downloadUrl: '/publications/ml-network-slicing-2021.pdf',
-    presentationUrl: '/presentations/iit-patna-2021.pdf',
-    impact: 'Featured in IEEE Spectrum',
-    category: 'Machine Learning'
-  },
-//   {
-//     id: 2,
-//     title: 'Modern Frontend Architectures: A Comprehensive Study',
-//     authors: ['Greeshma R R'],
-//     journal: 'Web Development Quarterly',
-//     venue: 'Frontend Developers Conference 2022',
-//     year: 2022,
-//     type: 'Technical Paper',
-//     status: 'Under Review',
-//     abstract: 'An in-depth analysis of modern frontend architectures including micro-frontends, JAMstack, and serverless approaches. This study examines the trade-offs, performance implications, and best practices for implementing scalable frontend solutions in enterprise environments.',
-//     keywords: ['Frontend Architecture', 'Micro-frontends', 'JAMstack', 'Performance', 'Scalability'],
-//     doi: 'Pending',
-//     citations: 0,
-//     downloadUrl: '/publications/frontend-architectures-2022.pdf',
-//     presentationUrl: '/presentations/frontend-conf-2022.pdf',
-//     impact: 'Submitted to ACM Digital Library',
-//     category: 'Software Engineering'
-//   }
-]
-
-const achievements = [
+    "id": 1,
+    "title": "Machine Learning based Network Slicing and Resource Allocation for Electric Vehicles (EVs)",
+    "authors": ["Rohit Kumar Gupta", "Anurag Choubey", "Shlok Jain", "Greeshma R R", "Rajiv Misra"],
+    "journal": "Proceedings of the 5th International Conference on Internet of Things and Connected Technologies (ICIoTCT)",
+    "venue": "ICIoTCT 2020",
+    "year": 2020,
+    "type": "Conference Paper",
+    "status": "Published",
+    "abstract": "This paper employs unsupervised machine learning for clustering EVs into network slices (infotainment, safety, and charge-state) and develops a slice leader–based resource allocation algorithm using RSUs that improves throughput and reduces latency in EV communication networks.",
+    "keywords": ["5G Networks", "Machine Learning", "Network Slicing", "Resource Allocation", "Electric Vehicles", "EV", "QoS"],
+    "doi": "10.1007/978-3-030-76736-5_31",
+    "citations": 11,
+    "downloadUrl": "/publications/ml-network-slicing-evs-2020.pdf",
+    "presentationUrl": "/presentations/iciotct-2020.pdf",
+    "impact": "Presented at ICIoTCT 2020; 11 citations",
+    "category": "Machine Learning"
+  },  
   {
-    title: 'Best Paper Award',
-    description: 'IIT Patna Research Conference 2021',
-    icon: Award,
-    color: '#FFD700'
-  },
-  {
-    title: 'Research Excellence',
-    description: 'Outstanding contribution to 5G networking research',
-    icon: BookOpen,
-    color: '#4F46E5'
-  },
-  {
-    title: 'Industry Impact',
-    description: 'Research cited in IEEE publications',
-    icon: ExternalLink,
-    color: '#10B981'
+    "id": 2,
+    "title": "Quality Assessment of Crops through Disease Detection using Machine Learning",
+    "authors": ["Greeshma R R", "Co-authors (as listed in IJCSE 2020)"],
+    "journal": "International Journal of Computer Science and Engineering (IJCSE)",
+    "venue": "IJCSE, February 2020",
+    "year": 2020,
+    "type": "Journal Paper",
+    "status": "Published",
+    "abstract": "This paper presents a machine learning-based approach for assessing crop quality by detecting plant diseases from image data. Using classification algorithms and image preprocessing techniques, the study improves disease detection accuracy and provides insights for enhancing crop yield and agricultural productivity.",
+    "keywords": ["Crop Quality Assessment", "Machine Learning", "Disease Detection", "Agriculture", "Image Classification"],
+    "doi": null,
+    "citations": 0,
+    "downloadUrl": "/publications/crop-disease-detection-2020.pdf",
+    "presentationUrl": null,
+    "impact": "Published in IJCSE, 2020",
+    "category": "Machine Learning"
   }
+  
 ]
 
 export function Publications() {
@@ -177,7 +157,7 @@ export function Publications() {
                     Download PDF
                   </motion.a>
                   
-                  {publication.presentationUrl && (
+                  {/* {publication.presentationUrl && (
                     <motion.a
                       href={publication.presentationUrl}
                       target="_blank"
@@ -189,9 +169,9 @@ export function Publications() {
                       <ExternalLink size={16} className="mr-2" />
                       Presentation
                     </motion.a>
-                  )}
+                  )} */}
 
-                  {publication.doi !== 'Pending' && (
+                  {publication.doi !== null && (
                     <motion.a
                       href={`https://doi.org/${publication.doi}`}
                       target="_blank"
@@ -251,7 +231,7 @@ export function Publications() {
         </motion.div> */}
 
         {/* Research Interests */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -280,7 +260,7 @@ export function Publications() {
               </motion.span>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

@@ -16,8 +16,8 @@ const navItems = [
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, href: 'https://github.com/greeshmarr' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/greeshmarr' },
-  { name: 'Email', icon: Mail, href: 'mailto:greeshma.rr@example.com' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/greeshma-r-r-05290a190/' },
+  { name: 'Email', icon: Mail, href: 'mailto:greeshmarr23@gmail.com' },
 ]
 
 export function Navbar() {

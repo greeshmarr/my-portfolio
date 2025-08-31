@@ -9,10 +9,10 @@ const socialLinks = [
 ]
 
 const quickInfo = [
-  { label: 'Current Role', value: 'Senior Frontend Engineer' },
+  { label: 'Current Role', value: 'Senior Software Engineer' },
   { label: 'Company', value: 'Synamedia' },
   { label: 'Experience', value: '4+ Years' },
-  { label: 'Specialization', value: 'Smart TV & Web Apps' },
+  { label: 'Specialization', value: 'Frontend & Full Stack Engineering' },
 ]
 
 export function Hero() {
@@ -82,7 +82,7 @@ export function Hero() {
                 className="mb-6"
               >
                 <span className="inline-block px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium mb-4">
-                  Senior Frontend Engineer
+                  Senior Software Engineer
                 </span>
                 <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-4">
                   Hi, I'm{' '}
@@ -91,7 +91,7 @@ export function Hero() {
                   </span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Building high-performance <strong>Smart TV applications</strong> and modern web experiences with React, TypeScript, and cutting-edge frontend technologies.
+                I craft scalable, user-first experiences that bring designs to life and backends to scale.
                 </p>
               </motion.div>
 
@@ -190,7 +190,7 @@ export function Hero() {
                 Currently Working With
               </h3>
               <div className="flex flex-wrap gap-2">
-                {['React', 'TypeScript', 'Smart TV', 'Redux', 'AWS'].map((tech, index) => (
+                {['ReactJS', 'Redux', 'Javascript', 'CSS', 'TailwindCSS'].map((tech, index) => (
                   <motion.span
                     key={tech}
                     initial={{ opacity: 0, scale: 0.8 }}

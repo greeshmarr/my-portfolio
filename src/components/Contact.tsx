@@ -19,21 +19,21 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'greeshma.rr@example.com',
-    href: 'mailto:greeshma.rr@example.com',
+    value: 'greeshmarr23@gmail.com',
+    href: 'mailto:greeshmarr23@gmail.com',
     color: '#4F46E5'
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91 9876543210',
-    href: 'tel:+919876543210',
+    value: '+91 7892056793',
+    href: 'tel:+917892056793',
     color: '#10B981'
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Available Worldwide (Remote)',
+    value: 'Bengaluru',
     href: null,
     color: '#EC4899'
   }
@@ -49,14 +49,8 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/greeshmarr',
+    href: 'https://www.linkedin.com/in/greeshma-r-r-05290a190/',
     color: '#0077B5'
-  },
-  {
-    icon: Twitter,
-    label: 'Twitter',
-    href: 'https://twitter.com/greeshmarr',
-    color: '#1DA1F2'
   }
 ]
 

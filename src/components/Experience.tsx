@@ -3,62 +3,66 @@ import { Calendar, MapPin, ExternalLink, Award, TrendingUp, Users, Zap } from 'l
 
 const experiences = [
   {
-    company: "TechCorp Solutions",
-    position: "Senior Frontend Developer",
-    period: "2022 - Present",
-    location: "Remote",
-    description: "Leading frontend development for enterprise applications, focusing on React and TypeScript. Built scalable component libraries and improved performance by 40%.",
-    achievements: [
-      "Architected and implemented micro-frontend architecture serving 100K+ users",
-      "Mentored 3 junior developers and established coding standards",
-      "Reduced bundle size by 35% through advanced optimization techniques",
-      "Led migration from legacy jQuery to modern React ecosystem"
+    "company": "Synamedia",
+    "position": "Senior Software Engineer",
+    "period": "2022 - Present",
+    "location": "Bengaluru",
+    "description": "Developing production-ready OTT and Smart TV applications using ReactJS and TypeScript. Built core UI modules, integrated spatial navigation, and optimized performance, reducing initial load time by 25%.",
+    "achievements": [
+      "Developed and maintained Smart TV apps for Samsung & LG using ReactJS, JavaScript, and spatial navigation",
+      "Implemented core UI features including content carousels, search, settings, and video player overlays",
+      "Optimized rendering and lazy-loaded routes/assets, improving performance and reducing initial load time by 25%",
+      "Integrated key-based navigation with @noriginmedia/norigin-spatial-navigation for enhanced focus flow",
+      "Worked on multiple POCs to run web apps on the Synamedia Senza cloud-powered streaming platform",
+      "Explored Generative AI tools (GitHub Copilot, Anima) to automate Figma-to-React conversions and speed up delivery"
     ],
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL", "AWS"],
-    highlights: {
-      performance: "40% improvement",
-      users: "100K+ users",
-      team: "Team of 8"
+    "technologies": ["ReactJS", "TypeScript", "Redux", "JavaScript (ES6+)", "CSS", "HTML", "GenAI"],
+    "highlights": {
+      "performance": "25% faster initial load time",
+      "platforms": "Samsung & LG Smart TVs",
+      "innovation": "Figma-to-React automation using GenAI"
     }
-  },
+  },  
   {
-    company: "StreamingPlatform Inc",
-    position: "Frontend Developer",
-    period: "2020 - 2022",
-    location: "San Francisco, CA",
-    description: "Developed and maintained OTT streaming platform serving 2M+ users. Specialized in video playback optimization and real-time features.",
-    achievements: [
-      "Implemented adaptive video streaming with 99.9% uptime",
-      "Built real-time chat system supporting 10K concurrent users",
-      "Optimized initial loading times by 50% using code splitting",
-      "Developed cross-platform responsive design for TV, mobile, and web"
+    "company": "Synamedia",
+    "position": "Software Engineer",
+    "period": "2022",
+    "location": "Bengaluru",
+    "description": "Developed internal Admin Console for managing product configurations and analytics. Built full-stack features with ReactJS, Node.js, and MongoDB, and migrated services to AWS serverless for improved scalability and efficiency.",
+    "achievements": [
+      "Developed and maintained internal Admin Console application for operations and admin teams",
+      "Implemented full-stack features using ReactJS, Node.js, and MongoDB",
+      "Integrated OAuth 2.0 authentication with Auth0, enabling secure role-based access control",
+      "Enhanced login flow with refresh token support and session management",
+      "Migrated server architecture to AWS Lambda, API Gateway, and DynamoDB, reducing infrastructure costs and improving scalability",
+      "Implemented unit and integration testing using Jest and PyTest to ensure reliability"
     ],
-    technologies: ["React", "Redux", "WebRTC", "Node.js", "MongoDB"],
-    highlights: {
-      users: "2M+ users",
-      uptime: "99.9% uptime",
-      performance: "50% faster"
+    "technologies": ["ReactJS", "Node.js", "MongoDB", "Auth0", "AWS Lambda", "API Gateway", "DynamoDB", "Jest", "PyTest"],
+    "highlights": {
+      "security": "Secure role-based access with OAuth 2.0",
+      "scalability": "Migrated to AWS serverless architecture",
+      "quality": "Improved reliability with automated testing"
     }
-  },
+  },  
   {
-    company: "StartupXYZ",
-    position: "Frontend Developer",
-    period: "2019 - 2020",
-    location: "New York, NY",
-    description: "Full-stack development for early-stage startup. Built MVP from scratch using React, Node.js, and modern development practices.",
-    achievements: [
-      "Delivered complete MVP in just 3 months with zero technical debt",
-      "Established CI/CD pipeline reducing deployment time by 80%",
-      "Implemented comprehensive testing strategy achieving 95% coverage",
-      "Built scalable architecture supporting rapid feature development"
+    "company": "Tata Consultancy Services",
+    "position": "Software Developer",
+    "period": "2020 - 2022",
+    "location": "Bengaluru",
+    "description": "Worked on Identity and Access Management (IAM) solution, building secure REST APIs for credential management and user provisioning using Java and Spring Boot.",
+    "achievements": [
+      "Developed REST APIs for IAM services including credential management and user provisioning",
+      "Implemented role-based access control ensuring security compliance",
+      "Collaborated with cross-functional teams to deliver end-to-end IAM features",
+      "Contributed to improving system reliability and audit readiness"
     ],
-    technologies: ["Vue.js", "Node.js", "PostgreSQL", "Docker", "AWS"],
-    highlights: {
-      delivery: "3 months MVP",
-      coverage: "95% test coverage",
-      deployment: "80% faster"
+    "technologies": ["Java", "Python", "REST APIs", "IAM", "MySQL"],
+    "highlights": {
+      "security": "Implemented secure role-based access",
+      "collaboration": "Delivered cross-functional IAM features",
+      "compliance": "Improved system audit readiness"
     }
-  }
+  }  
 ]
 
 export function Experience() {
