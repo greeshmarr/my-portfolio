@@ -199,28 +199,32 @@ export function Projects() {
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-sm text-primary font-medium">{project.category}</span>
                     <div className="flex space-x-2">
-                      <motion.a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Github size={16} />
-                      </motion.a>
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <ExternalLink size={16} />
-                      </motion.a>
+                      {project.github && (
+                        <motion.a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Github size={16} />
+                        </motion.a>
+                      )}
+                      {project.demo && (
+                        <motion.a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <ExternalLink size={16} />
+                        </motion.a>
+                      )}
                     </div>
                   </div>
 
@@ -321,28 +325,32 @@ export function Projects() {
 
                 {/* Links */}
                 <div className="flex space-x-4">
-                  {selectedProject.github && <motion.a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center px-6 py-3 bg-foreground text-background rounded-lg font-medium hover:bg-foreground/90 transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github size={18} className="mr-2" />
-                    View Code
-                  </motion.a>}
-                  {selectedProject.demo !== null && <motion.a
-                    href={selectedProject.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center px-6 py-3 border border-border rounded-lg font-medium hover:bg-muted transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Play size={18} className="mr-2" />
-                    Live Demo
-                  </motion.a>}
+                  {selectedProject.github && (
+                    <motion.a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center px-6 py-3 bg-foreground text-background rounded-lg font-medium hover:bg-foreground/90 transition-colors"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github size={18} className="mr-2" />
+                      View Code
+                    </motion.a>
+                  )}
+                  {selectedProject.demo && (
+                    <motion.a
+                      href={selectedProject.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center px-6 py-3 border border-border rounded-lg font-medium hover:bg-muted transition-colors"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Play size={18} className="mr-2" />
+                      Live Demo
+                    </motion.a>
+                  )}
                 </div>
               </motion.div>
             </motion.div>
